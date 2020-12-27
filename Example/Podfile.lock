@@ -10,7 +10,7 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - Specta (1.0.7)
-  - XWUIKitCategory (0.0.1)
+  - XWUIKitCategory (0.0.2)
 
 DEPENDENCIES:
   - Expecta
@@ -35,7 +35,7 @@ SPEC CHECKSUMS:
   "Expecta+Snapshots": dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
-  XWUIKitCategory: 45fa6e5b8335369205c3ef1e646ff12cfed57720
+  XWUIKitCategory: 40ea72e5c264036838a567b7339947dd4aed391d
 
 PODFILE CHECKSUM: c7108b830280acca929fe1be65ecaa262e6b3bcf
 
