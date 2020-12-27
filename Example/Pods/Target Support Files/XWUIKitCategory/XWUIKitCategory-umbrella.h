@@ -21,6 +21,7 @@
 #import "UITextField+Category.h"
 #import "UITextView+Category.h"
 #import "UIView+Category.h"
+#import "UIViewController+Category.h"
 #import "XWBaseTableView.h"
 #import "XWNavgationView.h"
 
