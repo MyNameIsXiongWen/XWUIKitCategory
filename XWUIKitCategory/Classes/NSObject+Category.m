@@ -11,11 +11,6 @@
 
 @implementation NSObject (Category)
 
-//- (id)mutableCopyWithZone:(NSZone *)zone {
-//    MKDictModel *model = [[MKDictModel allocWithZone:zone] init];
-//    
-//    return model;
-//}
 /**
  在NSObject的load方法中交换方法内容。
  先走load方法再走viewdidload

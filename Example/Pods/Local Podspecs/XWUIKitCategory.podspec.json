@@ -1,6 +1,6 @@
 {
   "name": "XWUIKitCategory",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "summary": "An uikit+category that create ui fast.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/MyNameIsXiongWen/XWUIKitCategory",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MyNameIsXiongWen/XWUIKitCategory.git",
-    "tag": "0.0.2"
+    "tag": "0.0.3"
   },
   "platforms": {
     "ios": "9.0"
