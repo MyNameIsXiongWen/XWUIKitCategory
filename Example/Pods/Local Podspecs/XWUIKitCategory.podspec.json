@@ -1,0 +1,22 @@
+{
+  "name": "XWUIKitCategory",
+  "version": "0.1.0",
+  "summary": "A short description of XWUIKitCategory.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/MyNameIsXiongWen/XWUIKitCategory",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "MyNameIsXiongWen": "xiaobu@mankuhome.com"
+  },
+  "source": {
+    "git": "https://github.com/MyNameIsXiongWen/XWUIKitCategory.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "XWUIKitCategory/Classes/**/*"
+}

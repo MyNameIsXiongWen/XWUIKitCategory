@@ -1,0 +1,6 @@
+framework module XWUIKitCategory {
+  umbrella header "XWUIKitCategory-umbrella.h"
+
+  export *
+  module * { export * }
+}
