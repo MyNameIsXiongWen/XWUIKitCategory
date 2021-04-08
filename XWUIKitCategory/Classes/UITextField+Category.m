@@ -7,8 +7,16 @@
 //
 
 #import "UITextField+Category.h"
+#import <objc/runtime.h>
 
+static const NSString *KEY_MAX_LENGTH = @"maxLength";
 @implementation UITextField (Category)
+
++ (UITextField *(^)(void))tfInit {
+    return ^{
+        return [[UITextField alloc] init];
+    };
+}
 
 + (UITextField *(^)(CGRect))tfFrame {
     return ^(CGRect tfFrame) {
@@ -58,6 +66,42 @@
         self.layer.masksToBounds = YES;
         return self;
     };
+}
+
+- (UITextField *(^)(NSTextAlignment))tfTextAlignment {
+    return ^(NSTextAlignment alignment) {
+        self.textAlignment = alignment;
+        return self;
+    };
+}
+
+- (UITextField *(^)(id, SEL))tfAction {
+    return ^(id target, SEL tfSEL) {
+        [self addTarget:target action:tfSEL forControlEvents:UIControlEventEditingChanged];
+        return self;
+    };
+}
+
+- (UITextField *(^)(NSInteger))tfMaxLength {
+    return ^(NSInteger tfMaxLength) {
+        self.maxLength = tfMaxLength;
+        return self;
+    };
+}
+
+- (void)setMaxLength:(NSInteger)maxLength {
+    [self addTarget:self action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
+    objc_setAssociatedObject(self, &KEY_MAX_LENGTH, @(maxLength), OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (NSInteger)maxLength {
+    return [objc_getAssociatedObject(self, &KEY_MAX_LENGTH) integerValue];
+}
+
+- (void)textFieldValueChanged:(UITextField *)textField {
+    if (textField.text.length > self.maxLength) {
+        textField.text = [textField.text substringToIndex:self.maxLength];
+    }
 }
 
 @end

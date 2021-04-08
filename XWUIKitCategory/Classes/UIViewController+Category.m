@@ -22,15 +22,6 @@
     objc_setAssociatedObject(self, @"kNavigationView", kNavigationView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-#pragma mark ------------传参-------------
-- (NSDictionary *)params {
-    return objc_getAssociatedObject(self, @"Params");
-}
-
-- (void)setParams:(NSDictionary *)params {
-    objc_setAssociatedObject(self, @"Params", params, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 #pragma mark ------------事件-------------
 //左侧按钮事件
 - (void)leftNavBtnAction:(UIButton *)sender {

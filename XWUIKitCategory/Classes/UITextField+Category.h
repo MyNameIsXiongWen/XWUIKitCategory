@@ -17,5 +17,10 @@
 - (UITextField *(^)(UIColor *tfTextColor))tfTextColor;
 - (UITextField *(^)(UIColor *tfBorderColor))tfBorderColor;
 - (UITextField *(^)(CGFloat tfCornerRadius))tfCornerRadius;
+- (UITextField *(^)(NSTextAlignment))tfTextAlignment;
+- (UITextField *(^)(id, SEL))tfAction;
+- (UITextField *(^)(NSInteger tfMaxLength))tfMaxLength;
+
+@property (nonatomic, assign) NSInteger maxLength;
 
 @end

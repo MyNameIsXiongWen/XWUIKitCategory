@@ -21,7 +21,4 @@
 //右侧第二个按钮事件
 - (void)rightAnthorNavBtnAction:(UIButton *)sender;
 
-///vc传递参数
-@property (nonatomic, strong) NSDictionary *params;
-
 @end

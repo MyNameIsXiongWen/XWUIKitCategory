@@ -12,7 +12,7 @@
 @implementation UITextView (Category)
 
 + (UITextView * _Nonnull (^)(void))tvInit {
-    return  ^() {
+    return ^{
         return UITextView.new;
     };
 }
@@ -57,6 +57,14 @@
 - (UITextView * _Nonnull (^)(UIColor * _Nonnull))tvTextColor {
     return ^(UIColor *tvTextColor) {
         self.textColor = tvTextColor;
+        return self;
+    };
+}
+
+- (UITextView * _Nonnull (^)(CGFloat))tvCornerRadius {
+    return ^(CGFloat tvCornerRadius) {
+        self.layer.cornerRadius = tvCornerRadius;
+        self.layer.masksToBounds = YES;
         return self;
     };
 }

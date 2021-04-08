@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (UITextView *(^)(UIColor *tvTextColor))tvTextColor;
 ///要先调用tvFont，这样tvPlaceholder才能获得font
 - (UITextView *(^)(NSString *tvPlaceholder))tvPlaceholder;
+- (UITextView *(^)(CGFloat tvCornerRadius))tvCornerRadius;
 
 @end
 
